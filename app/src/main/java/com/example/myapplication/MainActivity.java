@@ -5,11 +5,17 @@ import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 Button btn;
@@ -18,11 +24,10 @@ Button btn;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn = findViewById(R.id.btn10);
-        int circle = R.drawable.circle_shape;
+
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Perform action on click
-                btn.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
+                    btn.setBackgroundResource(R.drawable.circle_shape_selected);
             }
         });
     }
